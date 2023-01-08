@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Styles.css">
+        <script src="classAbstractMaze.js"></script>
+        <script src="classCell.js"></script>
+        <script src="classGame.js"></script>
+        <script src="classSettings.js"></script>
+        <script src="classGameObjects.js"></script>
+        <script src="classMazePath.js"></script>
+        <script src="classMaze.js"></script>
+        <script src="classWall.js"></script>
+        <script src="classQueue.js"></script>
+        <script src="classStack.js"></script>
+        <script src="classKey.js"></script>
+        <script src="classCharacter.js"></script>
+        <script src="classPlayer.js"></script>
+        <script src="classOpponent.js"></script>
+        <script src="classSound.js"></script>
+        <title>Maze</title>
+    </head>
+
+    <body>
+        <div>
+            <h1 id="gameMessage">Maze Game - Level</h1>
+            <label><input type="checkbox" id="checkSound" value="true">Enable sound</label>
+        </div>
+        <canvas id="mazeCanvas" height="800" width="800" tabindex="1"></canvas>
+    </body>
+</html>
+
+<script>
+    let gameMessageElement = document.getElementById("gameMessage");
+    let playSoundElement = document.getElementById("checkSound");
+    let canvasElement = document.getElementById("mazeCanvas");
+    playSoundElement.onchange = function() {
+        canvasElement.focus();
+    }
+    let startLevel = 1;
+    let maxLevel = 10;
+    let game = new Game(canvasElement, startLevel, playSoundElement, gameMessageElement, maxLevel);
+    game.StartGame();
+</script>

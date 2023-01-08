@@ -1,0 +1,19 @@
+canvas {
+    border: rgba(0,0,0,0.9) 10px;
+    background-color: rgba(0,0,0,0.9);
+    cursor: none;
+}
+
+body {
+    border: rgba(0,0,0,0.9) 20px;
+    background-color: rgba(0,0,0,0.9);
+}
+
+h1 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    color: white;
+}
